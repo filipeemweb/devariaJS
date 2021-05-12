@@ -57,8 +57,11 @@ leitor.question("Digite a lista de produtos desejados separados por virgula:\n",
         const disponibilidade = obterDisponibilidade(listaValida); 
 
         console.log(`Este produto está disponível: `, disponibilidade.produtosDisponiveis);
-        console.log(`Este produto não está disponível: `, disponibilidade.produtosDisponiveis);
+        console.log(`Este produto não está disponível: `, disponibilidade.produtosNaoDisponiveis);
 
+        const produtosMercadoOrdenados = produtosMercado.sort(a => a);
+        
+        console.log(`Tambem temos estes produtos disponiveis: `, produtosMercadoOrdenados);
     } catch (e) {
         console.log(`Erro ao processar a lista: ${e.message}`);
     }
